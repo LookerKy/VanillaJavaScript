@@ -1,0 +1,26 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+h1{
+    color: #364554;
+}
+h2{
+    color: #364554;
+}
+.clicked {
+    color: #ff7675;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+.form,
+.greeting{
+    display: none;
+}
+
+.showing{
+    display: block;
+}

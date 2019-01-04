@@ -1,0 +1,16 @@
+body {
+    background-color: white;
+}
+h1{
+    color: #364554;
+}
+h2{
+    color: #364554;
+}
+.clicked {
+    color: #ff7675;
+}
+
+.btn{
+    cursor: pointer;
+}
