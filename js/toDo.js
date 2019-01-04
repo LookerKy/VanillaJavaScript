@@ -31,6 +31,7 @@ const paintToDos = (text) => {
     li.appendChild(span);
     li.appendChild(delbtn);
     li.id = newId;
+    li.className = "todo";
     toDoList.appendChild(li);
     const toDosObj = {
         text : text,
@@ -43,8 +44,10 @@ const paintToDos = (text) => {
 const handleToDoSumbit = (event) =>{
     event.preventDefault();
     const currentValue = toDoInput.value;
-    paintToDos(currentValue);
-    toDoInput.value = "";
+    if(currentValue !== ""){
+        paintToDos(currentValue);
+        toDoInput.value = "";
+    }
 };
 
 const loadToDos = () => {
@@ -52,7 +55,6 @@ const loadToDos = () => {
     if(loadToDos !== null){
         const parseToDos = JSON.parse(loadToDos);
         parseToDos.forEach((toDo) => {
-            console.log(toDo.text);
             paintToDos(toDo.text);
         });
     }

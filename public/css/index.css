@@ -1,8 +1,12 @@
 body {
     background-color: #273c75;
+    top:0;
+    left: 0;
+
 }
 h1{
     color: #f5f6fa;
+    font-size: 30px;
 }
 h2{
     color: #364554;
@@ -22,8 +26,9 @@ h2{
 
 .showing{
     display: block;
+    font-size: 30px;
+    color: #f5f6fa;
 }
-
 @keyframes fadeIn {
     from {
       opacity: 0;
@@ -42,3 +47,22 @@ h2{
     z-index: -1;
     animation: fadeIn 1s linear;
   }
+
+.todo {
+    color: #f5f6fa;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom:50px;
+}
+.clock .clock-now{
+    font-size: 100px;
+    color : #f5f6fa;
+}

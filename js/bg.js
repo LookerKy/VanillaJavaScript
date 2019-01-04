@@ -5,6 +5,9 @@ const IMG_NUMBER = 9;
 // const handleImgLoad = () =>{
 //     console.log("end loading");
 // };
+let shareNum ;
+const setImageNumber = (imgNumber) => {shareNum = imgNumber};
+const getImageNumber = () => shareNum;
 
 const panintImage = (imgNumber) =>{
     const image =new Image();
@@ -12,6 +15,8 @@ const panintImage = (imgNumber) =>{
     image.classList.add("bgImage");
     body.prepend(image);
     // image.addEventListener('loadend', handleImgLoad);
+    setImageNumber(imgNumber);
+    
 }
 
 const genNumber = () => {
